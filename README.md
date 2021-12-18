@@ -5,6 +5,7 @@ Cesium is a powerful 3D Geospatial platform that recently added integration with
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
+![AnimationRed](https://user-images.githubusercontent.com/74843139/146655654-fe854596-a6a2-459c-aedd-26e02074f2c1.gif)
 
 
 This will walk you through making a game from NASA JPL‘s open mars data set you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. No need to download any data, we use it fro their server. There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it.
@@ -52,10 +53,10 @@ Add a Cesium Globe anchor component to the cube. Set the Georeference field in d
 
 Set rendering to off to hide the cube (shown below)
 
-![image](https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png)
+<img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
+A model 
 
-	
-	Set rendering to off to hide the cube
+Set rendering to off to hide the cube
 
 Add the “advanced vehicle blueprint” to your projects from Content browser (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
 
@@ -64,7 +65,8 @@ In the cars Details tab set Auto Posesses Player settings to “Player0” to ma
 	Auto Posesses Player settings
 
 	
-	
+
+## Finishing up
 
 Add a light actor like “Directional light” to the scene. Build it (in the toolbar).
 
