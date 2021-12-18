@@ -1,4 +1,4 @@
-Taking Cesium for Unreal engine to Mars
+# Taking Cesium for Unreal engine to Mars
 
 
 Cesium is a powerful 3D Geospatial platform that recently added integration with the Unreal game engine enabling developers to build very large games with streaming data. The data is streaming and geo referenced (sort of for this one), which means in the correct coordinate system rather than a flat surface, similar to google earth.
@@ -40,7 +40,7 @@ Change to top view to see your mars tile better. Add the geo reference in the ti
 	
 Tile set seen form below (the grid are tiles)	
 
-Add a car to mars
+## Add a car/rover to mars
 
 Place a standard cube actor in top view on the terrain, this one is scaled. We use it as a start location for the car later as the tile set may not be fully loaded initially.
 	
@@ -51,6 +51,9 @@ Frame the cube in viewort and hit Georeference again.
 Add a Cesium Globe anchor component to the cube. Set the Georeference field in details to.
 
 Set rendering to off to hide the cube (shown below)
+
+![image](https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png)
+
 	
 	Set rendering to off to hide the cube
 
