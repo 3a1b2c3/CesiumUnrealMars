@@ -1,8 +1,12 @@
 Taking Cesium for Unreal engine to Mars
 
+
 Cesium is a powerful 3D Geospatial platform that recently added integration with the Unreal game engine enabling developers to build very large games with streaming data. The data is streaming and geo referenced (sort of for this one), which means in the correct coordinate system rather than a flat surface, similar to google earth.
 
-Finished zipped unreal project : mars.zip
+[[Finished zipped unreal project]](http://katrinschmid.net/wp-content/uploads/2021/02)
+
+
+![AnimationReduced](https://user-images.githubusercontent.com/74843139/146638277-3509e198-e520-4d69-8a66-46650ab5937b.gif)
 
 
 This will walk you through making a game from NASA JPL‘s open mars data set you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. No need to download any data, we use it fro their server. There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it.
@@ -10,7 +14,7 @@ This will walk you through making a game from NASA JPL‘s open mars data set yo
 The minimum distance from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. If you are familiar with floating point precision errors it is easy to guess that we need to think of a solution here.
 
 
-Unreal Project Setup
+## Unreal Project Setup
 
 Make a new blank Unreal project (or any other you like). I am using Unreal version 4.27.2 here. Delete all project default content. Add a level and call it Mars, you may want to set it as default in project settings.
 
