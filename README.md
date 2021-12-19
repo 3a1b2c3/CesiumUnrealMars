@@ -7,13 +7,12 @@ The data is **streaming and geo referenced** (sort of for this one but data on e
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
-<img src="https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668235-ea7620d4-e1fa-4d41-8e95-f80ca338b24f.png" width=280>
+<img src="https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668235-ea7620d4-e1fa-4d41-8e95-f80ca338b24f.png" width=290>
 
 Result and **source data set**
 
-
-There is no need to download any data for teh environment, we use it directly from their server. 
-The **minimum distance** from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. 
+There is no need to download any data for the environment, we use it directly from NASA's github. 
+The **minimum distance** from Earth to Mars is about **33.9 million miles (54.6 million kilometers)**. That is a quite large game, even for what Cesium has build. 
 If you are familiar with **floating point precision errors** it is easy to guess that we need to think of a solution here.
 
 I also added the **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
@@ -32,31 +31,30 @@ Delete all project default content in the **WorldOutliner** tab on the right han
 
 **Add a new level** and call it "Mars", you may want to set it as default in **project settings**.
 
-Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://cesium.com/learn/unreal/unreal-quickstart). It will show up in ui, you see a green and blue icon and a Cesium panel on the right when you click that icon. 
+Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://cesium.com/learn/unreal/unreal-quickstart). It opens if you hit the **cesium icon** pictured on the top right (green and blue). 
 Getting a **cesium ion token** is optional for this project since we are using our own assets and no terrain or maps.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
 
-The **Unreal cesium panel** shows on the left. It opens if you hit the **cesium icon** pictured on the top right above and find the “Cesium” section in Details tab. 
+The **Unreal cesium panel** shows on the left. 
 
 
 ## Add the mars terrain tile set
 
 Make a **“Blank 3d Tiles Tileset”** actor in the cesium panel by hitting the plus sign next to it.
-
+Select the new tileset in the **WorlOutliner** and find the “Cesium” section in **Details tab** below the WorlOutliner. 
 Set the **“source” attribute **to “url” and add the link below as shown in the next picture (left).
 https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-gap/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize_tileset.json
 
 <img src="https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png" width=400>
 
-Next set the **level of detail ** attributes for the tile set (shown in the next picture right).
+Next set the **level of detail** attributes for the tile set (shown in the next picture right).
+Also disable **Tile set culling**.
 Hit the **"refresh tile set"** button To see the result.
 
-![image](https://user-images.githubusercontent.com/74843139/146668530-7780770b-fee2-4f46-b4c9-9f55797668d6.png" width=400>
-![image](https://user-images.githubusercontent.com/74843139/146668538-96902d28-7ae2-4206-a37a-3179b1c8cb3b.png" width=400>
-
+![image](https://user-images.githubusercontent.com/74843139/146668530-7780770b-fee2-4f46-b4c9-9f55797668d6.png" width=400> ![image](https://user-images.githubusercontent.com/74843139/146668538-96902d28-7ae2-4206-a37a-3179b1c8cb3b.png" width=400>
 	
-Setting url for the tile set actor	Level of Detail settings for the tile set actor
+Setting url for the tile set actor,Level of Detail settings for the tile set actor
 
 Select and frame the tile set actor you just edited. You might see it from below as pictured here in the top view. A Cesium Georeference actor has automatically been generated, select it. In its Details tab, click the Place Georeference Origin Here button while framing the just generated tileset in view as shown below.
 
