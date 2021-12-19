@@ -61,7 +61,8 @@ https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-
 Setting url for the tile set actor, **Level of Detail** settings for the tile set actor
 
 
-Next set the **level of detail** attributes for the tile set (shown in the picture right).
+
+Next set the **level of detail** attributes for the tile set actor (shown in the picture right).
 A smaller **screen space error** give you more detail in the tile set (0 is the best). Also disable **Tile set culling** to prevent tiles from being unloaded.
 Hit the **"refresh tile set"** button to see the result.
 
@@ -114,15 +115,14 @@ In the vehicles **Details tab** find the "Pawn" category. There set **Auto Poses
 
 **Auto Posesses** Player settings to make it active by default
 
-
-If you also want to place the **rover** model on mars import it in the **content browser** and drag it to the to view like you just did with the car, add a hidden cube below.
-
-
 Last step: In the Details tab of your cube set **"rendering"** to off to hide the cube in the game (shown below).
 
 <img src="https://user-images.githubusercontent.com/74843139/146671634-0949c883-f10b-4cb6-9b29-63be70d5aff0.png width=400>
  
 Set rendering to **off** to hide the cube
+
+
+If you also want to place the **rover** model on mars import it in the **content browser** and drag it to the to view like you just did with the car, add a hidden cube below.
 
 
 ## Finishing up
@@ -132,7 +132,7 @@ Hit **play** in the toolbar and use **WASD keys** to drive the car around mars.
 
 ![Animation1](https://user-images.githubusercontent.com/74843139/146667178-19284cb2-8eee-4337-b1a7-a83ed956f4ce.gif)
 
-It would be awsome to add a bit more **fake detail** to the ground (noise for example).
+It would be awesome to add a bit more **fake detail** to the ground (noise for example).
 My understanding is that it is not possible with tile sets yet but i am convinced we can soon do that.
 
 * More details on tile sets https://github.com/CesiumGS/3d-tiles
