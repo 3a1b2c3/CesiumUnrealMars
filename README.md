@@ -1,46 +1,54 @@
 # Taking Cesium for Unreal engine to Mars
 
 
-[[Cesium]](https://cesium.com) is a powerful **3D Geospatial platform** that recently added integration with the[[Unreal game engine]](https://www.unrealengine.com/en-US/) enabling developers to build very large games with streaming data. 
+[Cesium](https://cesium.com) is a powerful **3D Geospatial platform** that recently added integration with the [Unreal game engine](https://www.unrealengine.com/en-US/) enabling developers to build very large games with streaming data. 
 
 The data is **streaming and geo referenced **(sort of for this one but data on earth works great), which means in the correct coordinate system rather than a flat surface, similar to google earth.
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
-<img src="https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668235-ea7620d4-e1fa-4d41-8e95-f80ca338b24f.png" width=400>
+Result and source data
 
+This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. 
 
-This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. No need to download any data, we use it fro their server. There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it.
+There is need to download any data, we use it directly from their server. 
+The **minimum distance** from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. 
+If you are familiar with **floating point precision errors** it is easy to guess that we need to think of a solution here.
 
 I also added the **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
-An [[Perseverance1.obj]](./Perseverance1.obj) version in this repro since the gltf plugin in Unreal didnt quite gacve me what i wanted.
+An [Perseverance1.obj](./Perseverance1.obj) version in this repro since the gltf plugin in Unreal didnt quite gacve me what i wanted.
 
-The **minimum distance** from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. 
-If you are familiar with floating point precision errors it is easy to guess that we need to think of a solution here.
+There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it...
+
+
 
 
 ## Unreal Project Setup
 
-Make a **new blank Unreal project** (or any other you like).
-I am using Unreal version 4.27.2 here. Delete all project default content. 
+Install Unreal engine. Make a **new blank Unreal project** (or any other you like).
+I am using Unreal engoine version 4.27.2 here. Delete all project default content. 
 
-**Add a level** and call it "Mars", you may want to set it as default in project settings.
+**Add a new level** and call it "Mars", you may want to set it as default in **project settings**.
 
 Enable the **Cesium Unreal plugin** available at Unreal [[Marketplace]](https://cesium.com/learn/unreal/unreal-quickstart)  it will show up in ui, you see a green and blue icon and a panel on the right when you click that icon. Getting a cesium ion token is optional for this project since we are using our own assets and no terrain or maps.
 
-![image](https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
 
-The **Unreal cesium panel** shows on the left,  It opens if you hit the cesium icon pictured on the top right above and find the “Cesium” section in Details tab. S
+The **Unreal cesium panel** shows on the left. It opens if you hit the **cesium icon** pictured on the top right above and find the “Cesium” section in Details tab. S
+
 
 ## Add the mars terrain tile set
 
-Make a **“Blank 3d Tiles Tileset”** actor in the cesium panel by hitting the plus sign.et the “source” attribute to “url” and add the link below as shown in the next picture (left).
+Make a **“Blank 3d Tiles Tileset”** actor in the cesium panel by hitting the plus sign next to it. Set the “source” attribute to “url” and add the link below as shown in the next picture (left).
 
 https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-gap/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize_tileset.json
 
-Next set the level of detail attributes for the tile set (shown in the next picture right).
-Hit the refresh tile set button.
 <img src="https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png" width=400>
+
+Next set the **level of detail ** attributes for the tile set (shown in the next picture right).
+Hit the **"refresh tile set"** button To see the result.
+
 
 	
 Setting url for the tile set actor	Level of Detail settings for the tile set actor
