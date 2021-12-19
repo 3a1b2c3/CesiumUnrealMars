@@ -5,7 +5,7 @@ Cesium is a powerful 3D Geospatial platform that recently added integration with
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
-![image](https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png)
+<img src="https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png" width=400>
 
 
 This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. No need to download any data, we use it fro their server. There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it.
@@ -19,7 +19,7 @@ Make a new blank Unreal project (or any other you like). I am using Unreal versi
 
 Enable the cesium Unreal plugin available at Marketplace it will show up in ui, you see a green and blue icon and a panel on the right when you click that icon. Getting a cesium ion token is optional for this project since we are using our own assets and no terrain or maps.
 
-![image](https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png)
+![image](https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
 
 The Unreal cesium panel	
 
@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-
 
 Next set the level of detail attributes for the tile set (shown in the next picture right).
 Hit the refresh tile set button.
-<img src="https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png" width=400><img src="https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png" width=400>
 
 	
 Setting url for the tile set actor	Level of Detail settings for the tile set actor
@@ -56,9 +56,7 @@ Frame the cube in viewort and hit Georeference again.
 Add a Cesium Globe anchor component to the cube. Set the Georeference field in details to.
 
 Set rendering to off to hide the cube (shown below)
-<img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400>
-
-<img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 A model 
 
 Set rendering to off to hide the cube
@@ -76,6 +74,9 @@ Go to Edit -> Project Settings and search for “luminance.” Make sure the opt
 Add a light actor like “Directional light” to the scene. Build it (in the toolbar).
 
 Hit play and use WASD keys to drive the car around mars.
+
+![Animation1](https://user-images.githubusercontent.com/74843139/146667178-19284cb2-8eee-4337-b1a7-a83ed956f4ce.gif)
+
 
 * More details on tile sets https://github.com/CesiumGS/3d-tiles
 * https://cesium.com/learn/unreal/unreal-quickstart/
