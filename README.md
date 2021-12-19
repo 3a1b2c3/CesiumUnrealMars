@@ -17,17 +17,20 @@ The minimum distance from Earth to Mars is about 33.9 million miles (54.6 millio
 
 ## Unreal Project Setup
 
-Make a new blank Unreal project (or any other you like). I am using Unreal version 4.27.2 here. Delete all project default content. Add a level and call it Mars, you may want to set it as default in project settings.
+Make a **new blank Unreal project** (or any other you like).
+I am using Unreal version 4.27.2 here. Delete all project default content. 
 
-Enable the cesium Unreal plugin available at Marketplace it will show up in ui, you see a green and blue icon and a panel on the right when you click that icon. Getting a cesium ion token is optional for this project since we are using our own assets and no terrain or maps.
+**Add a level** and call it "Mars", you may want to set it as default in project settings.
+
+Enable the **Cesium Unreal plugin** available at Unreal [[Marketplace]](https://cesium.com/learn/unreal/unreal-quickstart)  it will show up in ui, you see a green and blue icon and a panel on the right when you click that icon. Getting a cesium ion token is optional for this project since we are using our own assets and no terrain or maps.
 
 ![image](https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
 
-The Unreal cesium panel	
+The Unreal cesium panel	on the left,  It opens if you hit the cesium icon pictured on the top right above and find the “Cesium” section in Details tab. S
 
 ## Add the mars terrain tile set
 
-Make a “Blank 3d Tiles Tileset” actor in the cesium panel (shows up on the right). It opens if you hit the cesium icon pictured on the top right above and find the “Cesium” section in Details tab. Set the “source” attribute to “url” and add the link below as shown in the next picture (left).
+Make a **“Blank 3d Tiles Tileset”** actor in the cesium panel by hitting the plus sign.et the “source” attribute to “url” and add the link below as shown in the next picture (left).
 
 https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-gap/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize_tileset.json
 
@@ -47,23 +50,21 @@ Tile set seen form below (the grid are tiles)
 
 ## Add a car/rover to mars
 
-Place a standard cube actor in top view on the terrain, this one is scaled. We use it as a start location for the car later as the tile set may not be fully loaded initially.
+Place a **standard cube actor **in top view on the terrain tile, this one is scaled up already. We use it as a start location for the car later as the tile set may not be fully loaded initially.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png" width=400>
+The tile setin top view and a cube
 
-Place a standard cube actor on the tileset where you want the car to start later.
 Frame the cube in viewort and hit Georeference again.
-Add a Cesium Globe anchor component to the cube. Set the Georeference field in details to.
-Set rendering to off to hide the cube (shown below).
+Add a **Cesium Globe anchor component** to the cube. Set the https://cesium.com/learn/unreal/unreal-quickstart/in details to your georefernec.
+In the Details tab set "rendering: to off to hide the cube (shown below).
 
 <img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
-A model 
-
 Set rendering to **off** to hide the cube
 
-Add the **“advanced vehicle blueprint”** to your projects from Content browser (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
+Add the **“advanced vehicle blueprint”** to your projects from **Content browser** (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
 
-In the cars Details tab set **Auto Posesses Player settings** to “Player0” to make the car your default pawn.
+In the cars Details tab set **Auto Posesses Player settings** to “Player0” to make the car your default pawn (player).
 
 <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 Auto Posesses Player settings
@@ -71,7 +72,7 @@ Auto Posesses Player settings
 
 
 ## Finishing up
-Add a light actor like “Directional light” to the scene, I couldnt get good result from Physical lighting for this. Build it (in the toolbar).
+Add a light actor like **“Directional light” **to the scene, I couldnt get good result from Physical lighting for this. Build it (in the toolbar).
 
 Hit **play**  and use **WASD keys** to drive the car around mars.
 
