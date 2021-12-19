@@ -45,7 +45,7 @@ Getting a **cesium ion token** is optional for this project since we are using o
 
 <img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=600>
 
-The **Unreal cesium panel** shows on the left, tool bar icon top right
+The **Unreal cesium panel** shows on the left, Cesium tool bar icon top right
 
 
 ## Add the mars terrain tile set
@@ -68,13 +68,13 @@ Hit the **"refresh tile set"** button to see the result.
 Select and frame (hit the F key) the **tile set actor** you just edited in WorldOutliner. You might see it from **below** as pictured here in the top view.
 
 
-<img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400> 
+<img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=650> 
 
 The **mars tile set** seen from below (the grid are the tiles)	abd in WorldOutliner
 
 
 
-A **Cesium Georeference actor** has automatically been generated. It is a way of dealing with a large coordinate system.
+A **Cesium Georeference actor** has automatically been generated in the WorldOutliner. It is a way of dealing with a large coordinate system.
 The **minimum distance** from Earth to Mars is about **33.9 million miles (54.6 million kilometers)**. That is a quite large game, even for what Cesium has build. 
 If you are familiar with **floating point precision errors** it is easy to guess that we need to think of a solution here.
 
@@ -91,40 +91,45 @@ Hit the "Refresh tile set" button above the georeference field.
 Place a **standard cube actor** (from the **"Place actors" tab** on the right hand side of the gui) in top view on the terrain tile. You can do that by just dragging it in. This one is scaled up already.
 We use it as a **start location for the car** later as the tile set may not be fully loaded initially causing the car to fall down.
 
+
 <img src="https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png" width=400>
 
 The tile set show in **top view** and a standard cube actor placed on it
 
-Frame the cube in viewort and in the detail panel hit the Georeference's "Place Georeference Origin here" button again.
+
+Frame the cube in viewort (with F key) and in the **detail panel** hit the Georeference's **"Place Georeference Origin here"** button again.
 
 You may need to scale up the **"Place actors" tab** of the cube in the **Details tab** so the whole car fits on it.
 Add a **Cesium Globe anchor component** to the cube (Use the green Add Componengt button below the Outliner for this). In the details tab find **Cesium** section and set georeference field to your georeference.
 
 Add the **“Advanced vehicle blueprint”** to your projects from **Content browser** (shown below, use the green Add/Import button to select it). 
 
-Drag the **Blueprint swatch** from content browser in the top view to your tile set. Place it above the cube actor.
-<img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146669631-d6656ce0-30d1-45e8-91af-dd681c85bebf.png" width=400>
+Drag the **Blueprint swatch** from content browser in the top view to your tile set. Place it above the cube actor on the tileset as shown below.
+
+<img src="https://user-images.githubusercontent.com/74843139/146669631-d6656ce0-30d1-45e8-91af-dd681c85bebf.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400> 
 
 The "advanced vehicle blueprint" and rover model
 
 
-In the vehicles **Details tab** set **Auto Posesses Player settings** to “Player0” to make the car your default pawn (player).
+In the vehicles **Details tab** find the "Pawn" category. There set **Auto Posesses Player settings** to “Player0” to make the car your default pawn (player).
 
 <img src="https://user-images.githubusercontent.com/74843139/146669780-3dde6f66-9ece-44d4-a33a-201a8362becf.png" width=400>  <img src="https://user-images.githubusercontent.com/74843139/146669621-b982a978-7578-4255-a63c-06b901a3fed8.png" width=400>
 
 **Auto Posesses** Player settings to make it active by default
+
 
 If you also want to place the **rover** model on mars import it in the **content browser** and drag it to the to view like you just did with the car, add a hidden cube below.
 
 
 Last step: In the Details tab of your cube set **"rendering"** to off to hide the cube in the game (shown below).
 
+<img src="https://user-images.githubusercontent.com/74843139/146671634-0949c883-f10b-4cb6-9b29-63be70d5aff0.png width=400>
  
 Set rendering to **off** to hide the cube
 
 
 ## Finishing up
-Drag a light actor like **“Directional light”** from the **"Place actors" tab** on top of the tile set in the viewport. I could not get good result from Cesium's **sun and sky** lights for this but it works great on arth. Build it (in the toolbar).
+Drag a **light actor** like **“Directional light”** from the **"Place actors" tab** on top of the tile set in the viewport. I could not get good result from Cesium's **sun and sky** lights for this but it works great on arth. Build it (in the toolbar).
 
 Hit **play** in the toolbar and use **WASD keys** to drive the car around mars.
 
