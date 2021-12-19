@@ -4,6 +4,7 @@
 Cesium is a powerful 3D Geospatial platform that recently added integration with the Unreal game engine enabling developers to build very large games with streaming data. The data is streaming and geo referenced (sort of for this one), which means in the correct coordinate system rather than a flat surface, similar to google earth.
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
+
 ![image](https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png)
 
 
@@ -30,8 +31,7 @@ https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-
 
 Next set the level of detail attributes for the tile set (shown in the next picture right).
 Hit the refresh tile set button.
-![image](https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png)
-![image](https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png)
+<img src="https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png" width=400><img src="https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png" width=400>
 
 	
 Setting url for the tile set actor	Level of Detail settings for the tile set actor
@@ -39,7 +39,7 @@ Setting url for the tile set actor	Level of Detail settings for the tile set act
 Select and frame the tile set actor you just edited. You might see it from below as pictured here in the top view. A Cesium Georeference actor has automatically been generated, select it. In its Details tab, click the Place Georeference Origin Here button while framing the just generated tileset in view as shown below.
 
 Change to top view to see your mars tile better. Add the geo reference in the tile sets Cesium Detail settings as shown below.
-![image](https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png)
+<img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400>
 
 Tile set seen form below (the grid are tiles)	
 
@@ -47,29 +47,29 @@ Tile set seen form below (the grid are tiles)
 
 Place a standard cube actor in top view on the terrain, this one is scaled. We use it as a start location for the car later as the tile set may not be fully loaded initially.
 
-![image](https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png)
+<img src="https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png" width=400>
 
-Place a standard cube actor	
+Place a standard cube actor on the tileset.
 
 Frame the cube in viewort and hit Georeference again.
 
 Add a Cesium Globe anchor component to the cube. Set the Georeference field in details to.
 
 Set rendering to off to hide the cube (shown below)
-![image](https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png)
+<img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400>
 
 <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 A model 
 
 Set rendering to off to hide the cube
 
-Add the “advanced vehicle blueprint” to your projects from Content browser (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
+Add the **“advanced vehicle blueprint”** to your projects from Content browser (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
 
 In the cars Details tab set Auto Posesses Player settings to “Player0” to make the car your default pawn.
-	
+<img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 	Auto Posesses Player settings
 
-	
+
 
 ## Finishing up
 Go to Edit -> Project Settings and search for “luminance.” Make sure the option Extend default luminance range in Auto Exposure settings is enabled
