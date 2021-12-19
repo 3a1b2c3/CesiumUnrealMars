@@ -52,7 +52,7 @@ The **Unreal cesium panel** shows on the left, Cesium tool bar icon top right
 
 Make a **“Blank 3d Tiles Tileset”** actor in the **Cesium panel** on the left by hitting the **plus sign** next to it.
 
-Select the new tileset in the **WorldOutliner** and find the **“Cesium”** section in **Details tab** below the WorldOutliner. 
+Select the new tile set actor in the **WorldOutliner** and find the **“Cesium”** section in **Details tab** below the WorldOutliner. 
 Set the **“source” attribute** to “url” and copy the **link** below as shown in the next picture (left).
 https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-gap/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize_tileset.json
 
@@ -68,10 +68,9 @@ Hit the **"refresh tile set"** button to see the result.
 Select and frame (hit the F key) the **tile set actor** you just edited in WorldOutliner. You might see it from **below** as pictured here in the top view.
 
 
-<img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=650> 
+![image](https://user-images.githubusercontent.com/74843139/146671752-c694084d-76bd-4384-a02a-5b51ed0cd550.png)
 
-The **mars tile set** seen from below (the grid are the tiles)	abd in WorldOutliner
-
+The **mars tile set** seen from below in vieport  (the grid are the tiles)	and in WorldOutliner
 
 
 A **Cesium Georeference actor** has automatically been generated in the WorldOutliner. It is a way of dealing with a large coordinate system.
@@ -80,10 +79,8 @@ If you are familiar with **floating point precision errors** it is easy to guess
 
 Select your **Cesium Georeference actor** in the WorldOutliner. In its **Details tab**, click the **"Place Georeference origin here" button** while framing the just generated tileset in view as shown below.
 
-Change to the **top view** to see your mars tile better. Set the **geo reference** in the tile sets "Cesium" Detail settings to your georeference actor as shown below.
-Hit the "Refresh tile set" button above the georeference field.
-
-<img src="https://user-images.githubusercontent.com/74843139/146670841-e5c9ea66-e1fe-4720-aac4-28fe4d2f7ca7.png" width=400>
+Change to the **top view** to see your mars tile better. Set the **geo reference** in the tile sets "Cesium" Detail settings to your georeference actor as shown above.
+Hit the **"Refresh tile set" button** above the georeference field.
 
 
 ## Add a car/rover to mars
