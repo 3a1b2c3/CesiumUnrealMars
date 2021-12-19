@@ -67,7 +67,8 @@ Change to **top view** to see your mars tile better. Add the **geo reference** i
 
 ## Add a car/rover to mars
 
-Place a **standard cube actor** (from the tab) in top view on the terrain tile, this one is scaled up already. We use it as a start location for the car later as the tile set may not be fully loaded initially.
+Place a **standard cube actor** (from the tab) in top view on the terrain tile, this one is scaled up already.
+We use it as a **start location for the car** later as the tile set may not be fully loaded initially.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png" width=400>
 
@@ -78,19 +79,22 @@ Frame the cube in viewort and hit Georeference placement button again.
 Add a **Cesium Globe anchor component** to the cube (Use the green Add Componengt button below the Outliner for this). In the details tab find **Cesium** section and set georeference field to your georeference.
 
 Add the **“Advanced vehicle blueprint”** to your projects from **Content browser** (shown below, use the green Add/Import button to select it). Drag the **Blueprint swatch** from content browser in the top view to your tile set. Place it above the hidden cube.
-![image](https://user-images.githubusercontent.com/74843139/146669631-d6656ce0-30d1-45e8-91af-dd681c85bebf.png)
-![image](https://user-images.githubusercontent.com/74843139/146669621-b982a978-7578-4255-a63c-06b901a3fed8.png)
+<img src="https://user-images.githubusercontent.com/74843139/146669631-d6656ce0-30d1-45e8-91af-dd681c85bebf.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146669621-b982a978-7578-4255-a63c-06b901a3fed8.png" width=400>
+
+The "advanced vehicle blueprint" and rover model
 
 
 In the cars **Details tab** set **Auto Posesses Player settings** to “Player0” to make the car your default pawn (player).
 
-<img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400><img src="https://user-images.githubusercontent.com/74843139/146669514-15314634-910d-4945-9120-bce7d128e890.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146669780-3dde6f66-9ece-44d4-a33a-201a8362becf.png" width=400>
 
 **Auto Posesses** Player settings to make it active by default
 
+
 If you also want to place the **rover** model import it in the **content browser** and drag it to the to view like you just did with the car, add a hidden cube below.
 
-In the Details tab of your cube set **"rendering"** to off to hide the cube (shown below).
+Last step: In the Details tab of your cube set **"rendering"** to off to hide the cube (shown below).
 
 <img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 Set rendering to **off** to hide the cube
