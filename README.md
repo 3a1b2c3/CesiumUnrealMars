@@ -71,14 +71,18 @@ Select and frame (hit the F key) the **tile set actor** you just edited in World
 
 ![image](https://user-images.githubusercontent.com/74843139/146671752-c694084d-76bd-4384-a02a-5b51ed0cd550.png)
 
-The **mars tile set** seen from below in vieport  (the grid are the tiles)	and in WorldOutliner
+The **mars tile set** seen from below in viewport (the grid are the tiles)	and in WorldOutliner
 
 
-A **Cesium Georeference actor** has automatically been generated in the WorldOutliner. It is a way of dealing with a large coordinate system.
+A **Cesium Georeference actor** has automatically been generated in the WorldOutliner. It is a way of dealing with a **large coordinate system**.
 The **minimum distance** from Earth to Mars is about **33.9 million miles (54.6 million kilometers)**. That is a quite large game, even for what Cesium has build. 
 If you are familiar with **floating point precision errors** it is easy to guess that we need to think of a solution here.
 
 Select your **Cesium Georeference actor** in the WorldOutliner. In its **Details tab**, click the **"Place Georeference origin here" button** while framing the just generated tileset in view as shown below.
+
+![image](https://user-images.githubusercontent.com/74843139/146671984-451f8f7f-4abf-498c-b0c6-6f7b5bcdeb9f.png)
+
+Cesium Georeference actor
 
 Change to the **top view** to see your mars tile better. Set the **geo reference** in the tile sets "Cesium" Detail settings to your georeference actor as shown above.
 Hit the **"Refresh tile set" button** above the georeference field.
