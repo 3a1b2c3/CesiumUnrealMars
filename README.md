@@ -3,7 +3,7 @@
 [Cesium](https://cesium.com) is a powerful **3D Geospatial platform** that recently added integration with the [Unreal game engine](https://www.unrealengine.com/en-US/) enabling developers to build very large games with streaming data. This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. 
 
  
-The data is **streaming and geo referenced** (sort of for this one but data on earth works great), which means in the correct coordinate system rather than a flat surface, similar to google earth.
+The data is **streaming and geo referenced** (sort of for this one but data on earth works great), which means in the correct coordinate system rather than a flat surface, similar to google earth. The blurier parts are recorded by Satellites, the sharper by their rover.
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
@@ -54,14 +54,18 @@ Hit the **"refresh tile set"** button To see the result.
 
 ![image](https://user-images.githubusercontent.com/74843139/146668530-7780770b-fee2-4f46-b4c9-9f55797668d6.png" width=400> ![image](https://user-images.githubusercontent.com/74843139/146668538-96902d28-7ae2-4206-a37a-3179b1c8cb3b.png" width=400>
 	
-Setting url for the tile set actor,Level of Detail settings for the tile set actor
+Setting url for the tile set actor, **Level of Detail** settings for the tile set actor
 
-Select and frame the tile set actor you just edited. You might see it from below as pictured here in the top view. A Cesium Georeference actor has automatically been generated, select it. In its Details tab, click the Place Georeference Origin Here button while framing the just generated tileset in view as shown below.
+Select and frame the tile set actor you just edited. You might see it from below as pictured here in the top view. 
 
-Change to top view to see your mars tile better. Add the geo reference in the tile sets Cesium Detail settings as shown below.
+A **Cesium Georeference actor** has automatically been generated, select it in WorldOutliner. In its** Details tab**, click the  WorlOutliner button while framing the just generated tileset in view as shown below.
+
+Change to **top view** to see your mars tile better. Add the** geo reference** in the tile sets Cesium Detail settings as shown below.
+
 <img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668495-e0fde770-f609-4166-a97d-d361849f7579.png" width=400>
 
 The **mars tile set** seen from below (the grid are the tiles)	
+
 
 ## Add a car/rover to mars
 
@@ -78,18 +82,20 @@ In the Details tab set "rendering: to off to hide the cube (shown below).
 <img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 Set rendering to **off** to hide the cube
 
-Add the **“advanced vehicle blueprint”** to your projects from **Content browser** (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
+Add the **“Advanced vehicle blueprint”** to your projects from **Content browser** (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
 
 In the cars Details tab set **Auto Posesses Player settings** to “Player0” to make the car your default pawn (player).
 
 <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 **Auto Posesses** Player settings
 
+If you also want to place the **rover** model import it in the content browser and drag it to the to view like you just did with the car, add a hidden cube below.
+
 
 ## Finishing up
-Add a light actor like **“Directional light” **to the scene, I couldnt get good result from Physical lighting for this. Build it (in the toolbar).
+Add a light actor like **“Directional light”** to the scene, I couldnt get good result from Physical lighting for this. Build it (in the toolbar).
 
-Hit **play**  and use **WASD keys** to drive the car around mars.
+Hit **play** and use **WASD keys** to drive the car around mars.
 
 ![Animation1](https://user-images.githubusercontent.com/74843139/146667178-19284cb2-8eee-4337-b1a7-a83ed956f4ce.gif)
 
