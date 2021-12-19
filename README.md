@@ -82,12 +82,13 @@ If you are familiar with **floating point precision errors** it is easy to guess
 
 Select your **Cesium Georeference actor** in the WorldOutliner. In its **Details tab**, click the **"Place Georeference origin here" button** while framing the just generated tileset in view as shown below.
 
-![image](https://user-images.githubusercontent.com/74843139/146671984-451f8f7f-4abf-498c-b0c6-6f7b5bcdeb9f.png)
+
+<img src="https://user-images.githubusercontent.com/74843139/146671984-451f8f7f-4abf-498c-b0c6-6f7b5bcdeb9f.png" width=400>
 
 Cesium Georeference actor
 
 
-Change to the **top view** to see your mars tile better. Set the **geo reference** in the tile sets "Cesium" Detail settings to your georeference actor as shown above.
+In viewport change to the **top view** camera to see your mars tile better. Set the **geo reference** in the tile sets "Cesium" Detail settings to your georeference actor as shown above.
 Hit the **"Refresh tile set" button** above the georeference field.
 
 
