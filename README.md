@@ -59,7 +59,7 @@ Set rendering to off to hide the cube (shown below).
 <img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 A model 
 
-Set rendering to off to hide the cube
+Set rendering to **off** to hide the cube
 
 Add the **“advanced vehicle blueprint”** to your projects from Content browser (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
 
@@ -71,10 +71,9 @@ Auto Posesses Player settings
 
 
 ## Finishing up
-Go to Edit -> Project Settings and search for “luminance.” Make sure the option Extend default luminance range in Auto Exposure settings is enabled
-Add a light actor like “Directional light” to the scene. Build it (in the toolbar).
+Add a light actor like “Directional light” to the scene, I couldnt get good result from Physical lighting for this. Build it (in the toolbar).
 
-Hit play and use WASD keys to drive the car around mars.
+Hit **play**  and use **WASD keys** to drive the car around mars.
 
 ![Animation1](https://user-images.githubusercontent.com/74843139/146667178-19284cb2-8eee-4337-b1a7-a83ed956f4ce.gif)
 
