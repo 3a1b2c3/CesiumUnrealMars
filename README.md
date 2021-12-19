@@ -1,7 +1,9 @@
 # Taking Cesium for Unreal engine to Mars
 
 
-Cesium is a powerful 3D Geospatial platform that recently added integration with the Unreal game engine enabling developers to build very large games with streaming data. The data is streaming and geo referenced (sort of for this one), which means in the correct coordinate system rather than a flat surface, similar to google earth.
+[[Cesium]](https://cesium.com) is a powerful **3D Geospatial platform** that recently added integration with the[[Unreal game engine]](https://www.unrealengine.com/en-US/) enabling developers to build very large games with streaming data. 
+
+The data is **streaming and geo referenced **(sort of for this one but data on earth works great), which means in the correct coordinate system rather than a flat surface, similar to google earth.
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
@@ -9,10 +11,12 @@ Cesium is a powerful 3D Geospatial platform that recently added integration with
 
 
 This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. No need to download any data, we use it fro their server. There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it.
+
 I also added the **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
 An [[Perseverance1.obj]](./Perseverance1.obj) version in this repro since the gltf plugin in Unreal didnt quite gacve me what i wanted.
 
-The minimum distance from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. If you are familiar with floating point precision errors it is easy to guess that we need to think of a solution here.
+The **minimum distance** from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. 
+If you are familiar with floating point precision errors it is easy to guess that we need to think of a solution here.
 
 
 ## Unreal Project Setup
@@ -26,7 +30,7 @@ Enable the **Cesium Unreal plugin** available at Unreal [[Marketplace]](https://
 
 ![image](https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
 
-The Unreal cesium panel	on the left,  It opens if you hit the cesium icon pictured on the top right above and find the “Cesium” section in Details tab. S
+The **Unreal cesium panel** shows on the left,  It opens if you hit the cesium icon pictured on the top right above and find the “Cesium” section in Details tab. S
 
 ## Add the mars terrain tile set
 
