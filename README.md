@@ -43,7 +43,7 @@ Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://ce
 If enabled it opens a **Cesium tab** when you hit the **Cesium icon** pictured on the top right (green and blue) of the toolbar. 
 Getting a **cesium ion token** is optional for this project since we are using our own assets and no terrain or maps.
 
-<img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=600>
 
 The **Unreal cesium panel** shows on the left, tool bar icon top right
 
@@ -103,8 +103,7 @@ Add the **“Advanced vehicle blueprint”** to your projects from **Content bro
 
 Drag the **Blueprint swatch** from content browser in the top view to your tile set. Place it above the hidden cube.
 
-<img src="https://user-images.githubusercontent.com/74843139/146669631-d6656ce0-30d1-45e8-91af-dd681c85bebf.png" width=400>
-<img src="https://user-images.githubusercontent.com/74843139/146669621-b982a978-7578-4255-a63c-06b901a3fed8.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146669631-d6656ce0-30d1-45e8-91af-dd681c85bebf.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146669621-b982a978-7578-4255-a63c-06b901a3fed8.png" width=400>
 
 The "advanced vehicle blueprint" and rover model
 
