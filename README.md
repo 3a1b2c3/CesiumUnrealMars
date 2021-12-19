@@ -29,7 +29,6 @@ There are already some **great beginner tutorials** for Cesium in Unreal but let
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-
 ## Unreal Project Setup
 
 Install **Unreal engine**. I am using Unreal engine version 4.27.2 here.
@@ -41,7 +40,9 @@ You can add **a new level** to the project and call it "Mars", you may want to s
 
 Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://cesium.com/learn/unreal/unreal-quickstart). 
 If enabled it opens a **Cesium tab** when you hit the **Cesium icon** pictured on the top right (green and blue) of the toolbar. 
+
 Getting a **cesium ion token** is optional for this project since we are using our own assets and no terrain or maps.
+
 
 <img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=600>
 
@@ -54,6 +55,7 @@ Make a **“Blank 3d Tiles Tileset”** actor in the **Cesium panel** on the lef
 
 Select the new tile set actor in the **WorldOutliner** and find the **“Cesium”** section in **Details tab** below the WorldOutliner. 
 Set the **“source” attribute** to “url” and copy the **link** below as shown in the next picture (left).
+Link:
 https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-gap/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize_tileset.json
 
 <img src="https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png" width=400>
@@ -94,7 +96,7 @@ Place a **standard cube actor** (from the **"Place actors" tab** on the right ha
 We use it as a **start location for the car** later as the tile set may not be fully loaded initially causing the car to fall down.
 
 
-<img src="https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png" width=600>
 
 The tile set show in **top view** and a standard cube actor placed on it
 
