@@ -64,6 +64,7 @@ Setting url for the tile set actor, **Level of Detail** settings for the tile se
 
 
 
+
 Next set the **level of detail** attributes for the tile set actor (shown in the picture right).
 A smaller **screen space error** give you more detail in the tile set (0 is the best). Also disable **Tile set culling** to prevent tiles from being unloaded.
 Hit the **"refresh tile set"** button to see the result.
@@ -126,12 +127,13 @@ In the vehicles **Details tab** find the "Pawn" category. There set **Auto Poses
 
 Last step: In the Details tab of your cube set **"rendering"** to off to hide the cube in the game (shown below).
 
-<img src="https://user-images.githubusercontent.com/74843139/146671634-0949c883-f10b-4cb6-9b29-63be70d5aff0.png width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146671634-0949c883-f10b-4cb6-9b29-63be70d5aff0.png" width=400>
  
 Set rendering to **off** to hide the cube
 
 
-If you also want to place the **rover** model on mars import it in the **content browser** and drag it to the to view like you just did with the car, add a hidden cube below.
+If you also want to place the **rover** model on mars import it in the **content browser** and drag it to the to view.
+It all works like you just did with the car, also add a hidden cube below.
 
 
 ## Finishing up
