@@ -124,6 +124,8 @@ Hit **play** in the toolbar and use **WASD keys** to drive the car around mars.
 
 ![Animation1](https://user-images.githubusercontent.com/74843139/146667178-19284cb2-8eee-4337-b1a7-a83ed956f4ce.gif)
 
+It would be awsome to add a bit more **fake detail** to the ground (noise for example).
+My understanding is that it is not possible with tile sets yet but i am convinced we can soon do that.
 
 * More details on tile sets https://github.com/CesiumGS/3d-tiles
 * https://cesium.com/learn/unreal/unreal-quickstart/
