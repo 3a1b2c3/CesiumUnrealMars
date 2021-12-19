@@ -1,15 +1,12 @@
-Taking Cesium for Unreal engine to Mars
+# Taking Cesium for Unreal engine to Mars
 
 
 Cesium is a powerful 3D Geospatial platform that recently added integration with the Unreal game engine enabling developers to build very large games with streaming data. The data is streaming and geo referenced (sort of for this one), which means in the correct coordinate system rather than a flat surface, similar to google earth.
 
-[[Finished zipped unreal project]](http://katrinschmid.net/wp-content/uploads/2021/02)
+[[Finished zipped unreal project in this repro]](./mars.zip)
 
 
-![AnimationReduced](https://user-images.githubusercontent.com/74843139/146638277-3509e198-e520-4d69-8a66-46650ab5937b.gif)
-
-
-This will walk you through making a game from NASA JPL‘s open mars data set you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. No need to download any data, we use it fro their server. There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it.
+This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. No need to download any data, we use it fro their server. There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it.
 
 The minimum distance from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. If you are familiar with floating point precision errors it is easy to guess that we need to think of a solution here.
 
@@ -20,10 +17,11 @@ Make a new blank Unreal project (or any other you like). I am using Unreal versi
 
 Enable the cesium Unreal plugin available at Marketplace it will show up in ui, you see a green and blue icon and a panel on the right when you click that icon. Getting a cesium ion token is optional for this project since we are using our own assets and no terrain or maps.
 
-	
+![image](https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png)
+
 The Unreal cesium panel	
 
-Add the mars terrain
+## Add the mars terrain tile set
 
 Make a “Blank 3d Tiles Tileset” actor in the cesium panel (shows up on the right). It opens if you hit the cesium icon pictured on the top right above and find the “Cesium” section in Details tab. Set the “source” attribute to “url” and add the link below as shown in the next picture (left).
 
@@ -31,6 +29,8 @@ https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-
 
 Next set the level of detail attributes for the tile set (shown in the next picture right).
 Hit the refresh tile set button.
+![image](https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png)
+![image](https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png)
 
 	
 Setting url for the tile set actor	Level of Detail settings for the tile set actor
@@ -38,14 +38,16 @@ Setting url for the tile set actor	Level of Detail settings for the tile set act
 Select and frame the tile set actor you just edited. You might see it from below as pictured here in the top view. A Cesium Georeference actor has automatically been generated, select it. In its Details tab, click the Place Georeference Origin Here button while framing the just generated tileset in view as shown below.
 
 Change to top view to see your mars tile better. Add the geo reference in the tile sets Cesium Detail settings as shown below.
+![image](https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png)
 
-	
 Tile set seen form below (the grid are tiles)	
 
-Add a car to mars
+## Add a car/rover to mars
 
 Place a standard cube actor in top view on the terrain, this one is scaled. We use it as a start location for the car later as the tile set may not be fully loaded initially.
-	
+
+![image](https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png)
+
 Place a standard cube actor	
 
 Frame the cube in viewort and hit Georeference again.
@@ -53,8 +55,12 @@ Frame the cube in viewort and hit Georeference again.
 Add a Cesium Globe anchor component to the cube. Set the Georeference field in details to.
 
 Set rendering to off to hide the cube (shown below)
-	
-	Set rendering to off to hide the cube
+![image](https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png)
+
+<img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
+A model 
+
+Set rendering to off to hide the cube
 
 Add the “advanced vehicle blueprint” to your projects from Content browser (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
 
@@ -63,7 +69,8 @@ In the cars Details tab set Auto Posesses Player settings to “Player0” to ma
 	Auto Posesses Player settings
 
 	
-	
+
+## Finishing up
 
 Add a light actor like “Directional light” to the scene. Build it (in the toolbar).
 
