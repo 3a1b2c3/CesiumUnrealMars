@@ -9,6 +9,8 @@ Cesium is a powerful 3D Geospatial platform that recently added integration with
 
 
 This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. No need to download any data, we use it fro their server. There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it.
+I also added the **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
+An [[Perseverance1.obj]](./Perseverance1.obj) version in this repro since the gltf plugin in Unreal didnt quite gacve me what i wanted.
 
 The minimum distance from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. If you are familiar with floating point precision errors it is easy to guess that we need to think of a solution here.
 
@@ -49,13 +51,11 @@ Place a standard cube actor in top view on the terrain, this one is scaled. We u
 
 <img src="https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png" width=400>
 
-Place a standard cube actor on the tileset.
-
+Place a standard cube actor on the tileset where you want the car to start later.
 Frame the cube in viewort and hit Georeference again.
-
 Add a Cesium Globe anchor component to the cube. Set the Georeference field in details to.
+Set rendering to off to hide the cube (shown below).
 
-Set rendering to off to hide the cube (shown below)
 <img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 A model 
 
@@ -63,9 +63,10 @@ Set rendering to off to hide the cube
 
 Add the **“advanced vehicle blueprint”** to your projects from Content browser (shown below, use the green Add/Import button to select it). Drag the blueprint from content browser in the top view of your tile set
 
-In the cars Details tab set Auto Posesses Player settings to “Player0” to make the car your default pawn.
+In the cars Details tab set **Auto Posesses Player settings** to “Player0” to make the car your default pawn.
+
 <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
-	Auto Posesses Player settings
+Auto Posesses Player settings
 
 
 
