@@ -57,19 +57,20 @@ Next set the **level of detail** attributes for the tile set (shown in the pictu
 A smaller **screen space error** give you more detail in the tile set (0 is the best). Also disable **Tile set culling** to prevent tiles from being unloaded.
 Hit the **"refresh tile set"** button to see the result.
 
-Select and frame the **tile set actor** you just edited in WorldOutliner. You might see it from **below** as pictured here in the top view.
+Select and frame (hit F key) the **tile set actor** you just edited in WorldOutliner. You might see it from **below** as pictured here in the top view.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400> 
 
 The **mars tile set** seen from below (the grid are the tiles)	abd in WorldOutliner
 
-A **Cesium Georeference actor** has automatically been generated, select it in WorldOutliner. It is a way of dealing with a large coordinate system.
+A **Cesium Georeference actor** has automatically been generated. It is a way of dealing with a large coordinate system.
 The **minimum distance** from Earth to Mars is about **33.9 million miles (54.6 million kilometers)**. That is a quite large game, even for what Cesium has build. 
 If you are familiar with **floating point precision errors** it is easy to guess that we need to think of a solution here.
 
-In its **Details tab**, click the Set button while framing the just generated tileset in view as shown below.
+Select your Cesium Georefernece it in WorldOutliner. In its **Details tab**, click the **"Place Georeference origin here" button** while framing the just generated tileset in view as shown below.
 
 Change to **top view** to see your mars tile better. Add the **geo reference** in the tile sets Cesium Detail settings as shown below.
+<img src="https://user-images.githubusercontent.com/74843139/146670841-e5c9ea66-e1fe-4720-aac4-28fe4d2f7ca7.png" width=400>
 
 
 ## Add a car/rover to mars
@@ -81,7 +82,7 @@ We use it as a **start location for the car** later as the tile set may not be f
 
 The tile set show in **top view** and a standard cube actor placed on it
 
-Frame the cube in viewort and hit Georeference placement button again.
+Frame the cube in viewort and in the detail panel hit the Georeference's "Place Georeference Origin here" button again.
 
 You may need to scale up the **"Place actors" tab** of the cube in the **Details tab** so the whole car fits on it.
 Add a **Cesium Globe anchor component** to the cube (Use the green Add Componengt button below the Outliner for this). In the details tab find **Cesium** section and set georeference field to your georeference.
