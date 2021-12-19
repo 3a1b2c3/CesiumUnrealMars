@@ -86,6 +86,7 @@ Select your **Cesium Georeference actor** in the WorldOutliner. In its **Details
 
 Cesium Georeference actor
 
+
 Change to the **top view** to see your mars tile better. Set the **geo reference** in the tile sets "Cesium" Detail settings to your georeference actor as shown above.
 Hit the **"Refresh tile set" button** above the georeference field.
 
@@ -101,14 +102,15 @@ We use it as a **start location for the car** later as the tile set may not be f
 The tile set show in **top view** and a standard cube actor placed on it
 
 
-Frame the cube in viewort (with F key) and in the **detail panel** hit the Georeference's **"Place Georeference Origin here"** button again.
+Frame the **cube in viewort** (with F key) and in the **detail panel** hit the Georeference's **"Place Georeference Origin here"** button again.
 
-You may need to scale up the **"Place actors" tab** of the cube in the **Details tab** so the whole car fits on it.
-Add a **Cesium Globe anchor component** to the cube (Use the green Add Componengt button below the Outliner for this). In the details tab find **Cesium** section and set georeference field to your georeference.
+You may need to scale up the **transform** of the cube in the **Details tab** so the whole car fits on it.
+Next add a **Cesium Globe anchor component** to the cube (Use the green Add Component button below the Outliner for this). 
+In its details tab find **Cesium** section and set georeference field to your georeference.
 
-Add the **“Advanced vehicle blueprint”** to your projects from **Content browser** (shown below, use the green Add/Import button to select it). 
+Now we add the car. Add the **“Advanced vehicle blueprint”** to your projects from **Content browser** (shown below, use the green Add/Import button to select it). 
 
-Drag the **Blueprint swatch** from content browser in the top view to your tile set. Place it above the cube actor on the tileset as shown below.
+The drag the **Blueprint swatch** from content browser in the top view to your tile set. Place it above the cube actor on the tileset as shown below.
 
 <img src="https://user-images.githubusercontent.com/74843139/146669631-d6656ce0-30d1-45e8-91af-dd681c85bebf.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png" width=400> 
 
