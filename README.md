@@ -20,6 +20,13 @@ Since the gltf plugin in Unreal did not quite gave me the result i wanted I adde
 
 There are already some **great beginner tutorials** for Cesium in Unreal but lets see how far we can take it...
 
+- [Taking Cesium for Unreal engine to Mars](#taking-cesium-for-unreal-engine-to-mars)
+  * [Unreal Project Setup](#unreal-project-setup)
+  * [Add the mars terrain tile set](#add-the-mars-terrain-tile-set)
+  * [Add a car/rover to mars](#add-a-car-rover-to-mars)
+  * [Finishing up](#finishing-up)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 
