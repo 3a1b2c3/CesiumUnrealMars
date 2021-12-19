@@ -25,7 +25,8 @@ There are already some **great beginner tutorials** for Cesium in Unreal but let
 
 ## Unreal Project Setup
 
-Install Unreal engine. I am using Unreal engine version 4.27.2 here.
+Install **Unreal engine**. I am using Unreal engine version 4.27.2 here.
+
 Make a **new blank Unreal project** (or any other you like).
 Delete all project default content in the **WorldOutliner** tab on the right hand side of the gui. 
 
@@ -52,7 +53,7 @@ Next set the **level of detail** attributes for the tile set (shown in the next 
 Also disable **Tile set culling**.
 Hit the **"refresh tile set"** button To see the result.
 
-![image](https://user-images.githubusercontent.com/74843139/146668530-7780770b-fee2-4f46-b4c9-9f55797668d6.png" width=400> ![image](https://user-images.githubusercontent.com/74843139/146668538-96902d28-7ae2-4206-a37a-3179b1c8cb3b.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146668530-7780770b-fee2-4f46-b4c9-9f55797668d6.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668538-96902d28-7ae2-4206-a37a-3179b1c8cb3b.png" width=400>
 	
 Setting url for the tile set actor, **Level of Detail** settings for the tile set actor
 
