@@ -16,7 +16,7 @@ The **minimum distance** from Earth to Mars is about **33.9 million miles (54.6 
 If you are familiar with **floating point precision errors** it is easy to guess that we need to think of a solution here.
 
 I also added the **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
-An [Perseverance1.obj](./Perseverance1.obj) version in this repro since the gltf plugin in Unreal didnt quite gacve me what i wanted.
+I added a [Perseverance1.obj](./Perseverance1.obj) in this repro since the gltf plugin in Unreal didnt quite gave me the result i wanted.
 
 There are already some **great beginner tutorials** for Cesium in Unreal but lets see how far we can take it...
 
@@ -49,28 +49,25 @@ https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-
 
 <img src="https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png" width=400>
 
-Next set the **level of detail** attributes for the tile set (shown in the next picture right).
-Also disable **Tile set culling**.
-Hit the **"refresh tile set"** button To see the result.
-
-<img src="https://user-images.githubusercontent.com/74843139/146668530-7780770b-fee2-4f46-b4c9-9f55797668d6.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668538-96902d28-7ae2-4206-a37a-3179b1c8cb3b.png" width=400>
-	
 Setting url for the tile set actor, **Level of Detail** settings for the tile set actor
 
-Select and frame the tile set actor you just edited. You might see it from below as pictured here in the top view. 
+Next set the **level of detail** attributes for the tile set (shown in the next picture right).
+A smaller **screen space error** give you more detail (0 is the best). Also disable **Tile set culling** to prevent tiles from being unloaded.
+Hit the **"refresh tile set"** button to see the result.
 
-A **Cesium Georeference actor** has automatically been generated, select it in WorldOutliner. In its** Details tab**, click the  WorlOutliner button while framing the just generated tileset in view as shown below.
-
-Change to **top view** to see your mars tile better. Add the** geo reference** in the tile sets Cesium Detail settings as shown below.
-
+Select and frame the **tile set actor** you just edited in WorldOutiner. You might see it from below as pictured here in the top view. 
 <img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668495-e0fde770-f609-4166-a97d-d361849f7579.png" width=400>
 
 The **mars tile set** seen from below (the grid are the tiles)	
 
+A **Cesium Georeference actor** has automatically been generated, select it in WorldOutliner. In its **Details tab**, click the Set button while framing the just generated tileset in view as shown below.
+
+Change to **top view** to see your mars tile better. Add the **geo reference** in the tile sets Cesium Detail settings as shown below.
+
 
 ## Add a car/rover to mars
 
-Place a **standard cube actor **in top view on the terrain tile, this one is scaled up already. We use it as a start location for the car later as the tile set may not be fully loaded initially.
+Place a **standard cube actor** (from the tab) in top view on the terrain tile, this one is scaled up already. We use it as a start location for the car later as the tile set may not be fully loaded initially.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png" width=400>
 
