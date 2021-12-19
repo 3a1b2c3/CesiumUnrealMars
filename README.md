@@ -7,12 +7,12 @@ The data is **streaming and geo referenced** (sort of for this one but data on e
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
-<img src="https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668235-ea7620d4-e1fa-4d41-8e95-f80ca338b24f.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668235-ea7620d4-e1fa-4d41-8e95-f80ca338b24f.png" width=280>
 
-Result and source data set
+Result and **source data set**
 
 
-There is need to download any data, we use it directly from their server. 
+There is no need to download any data for teh environment, we use it directly from their server. 
 The **minimum distance** from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. 
 If you are familiar with **floating point precision errors** it is easy to guess that we need to think of a solution here.
 
