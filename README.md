@@ -19,7 +19,7 @@ If you are familiar with **floating point precision errors** it is easy to guess
 I also added the **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
 An [Perseverance1.obj](./Perseverance1.obj) version in this repro since the gltf plugin in Unreal didnt quite gacve me what i wanted.
 
-There are already some great beginner tutorials for Cesium in Unreal but lets see how far we can take it...
+There are already some **great beginner tutorials** for Cesium in Unreal but lets see how far we can take it...
 
 
 
@@ -31,17 +31,19 @@ I am using Unreal engoine version 4.27.2 here. Delete all project default conten
 
 **Add a new level** and call it "Mars", you may want to set it as default in **project settings**.
 
-Enable the **Cesium Unreal plugin** available at Unreal [[Marketplace]](https://cesium.com/learn/unreal/unreal-quickstart)  it will show up in ui, you see a green and blue icon and a panel on the right when you click that icon. Getting a cesium ion token is optional for this project since we are using our own assets and no terrain or maps.
+Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://cesium.com/learn/unreal/unreal-quickstart). It will show up in ui, you see a green and blue icon and a Cesium panel on the right when you click that icon. 
+Getting a **cesium ion token** is optional for this project since we are using our own assets and no terrain or maps.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
 
-The **Unreal cesium panel** shows on the left. It opens if you hit the **cesium icon** pictured on the top right above and find the “Cesium” section in Details tab. S
+The **Unreal cesium panel** shows on the left. It opens if you hit the **cesium icon** pictured on the top right above and find the “Cesium” section in Details tab. 
 
 
 ## Add the mars terrain tile set
 
-Make a **“Blank 3d Tiles Tileset”** actor in the cesium panel by hitting the plus sign next to it. Set the “source” attribute to “url” and add the link below as shown in the next picture (left).
+Make a **“Blank 3d Tiles Tileset”** actor in the cesium panel by hitting the plus sign next to it.
 
+Set the **“source” attribute **to “url” and add the link below as shown in the next picture (left).
 https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-gap/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize_tileset.json
 
 <img src="https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png" width=400>
@@ -58,7 +60,7 @@ Select and frame the tile set actor you just edited. You might see it from below
 Change to top view to see your mars tile better. Add the geo reference in the tile sets Cesium Detail settings as shown below.
 <img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400>
 
-Tile set seen form below (the grid are tiles)	
+Tile set seen form below (the grid are the tiles)	
 
 ## Add a car/rover to mars
 
