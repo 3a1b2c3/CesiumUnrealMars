@@ -1,9 +1,11 @@
 # Taking Cesium for Unreal engine to Mars
 
-[Cesium](https://cesium.com) is a powerful **3D Geospatial platform** that recently added integration with the [Unreal game engine](https://www.unrealengine.com/en-US/) enabling developers to build very large games with streaming data. This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. 
+[Cesium](https://cesium.com) is a powerful **3D Geospatial platform** that recently added integration with the [Unreal game engine](https://www.unrealengine.com/en-US/) enabling developers to build very large games with streaming data.
+
+This will walk you through making an extremly simple game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. 
 
  
-The data is **streaming and geo referenced** (sort of for this one but data on earth works great), which means in the correct coordinate system rather than a flat surface, similar to google earth. The blurier parts are recorded by Satellites, the sharper parts by their rover.
+The data is **streaming and geo referenced** (sort of for this one but data on earth works great), which means in the correct coordinate system rather than a flat surface, similar to **google earth**. The blurier parts are recorded by Satellites, the sharper parts by their rover.
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
@@ -13,7 +15,7 @@ Result and **source data set**
 
 There is no need to download any data for the environment, we use it directly from **NASA's github**. 
 
-I also added the **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
+I also added NASA's **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
 Since the gltf plugin in Unreal did not quite gave me the result i wanted I added a [Perseverance1.obj](./Perseverance1.obj) in this repro.
 
 There are already some **great beginner tutorials** for Cesium in Unreal but lets see how far we can take it...
@@ -31,7 +33,7 @@ Delete all project default content in the **WorldOutliner** tab on the right han
 You can add **a new level** to the project and call it "Mars", you may want to set it as default in **project settings**.
 
 Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://cesium.com/learn/unreal/unreal-quickstart). 
-If enabled it opens a **Cesium tab** when you hit the **cesium icon** pictured on the top right (green and blue) of the toolbar. 
+If enabled it opens a **Cesium tab** when you hit the **Cesium icon** pictured on the top right (green and blue) of the toolbar. 
 Getting a **cesium ion token** is optional for this project since we are using our own assets and no terrain or maps.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
@@ -41,7 +43,7 @@ The **Unreal cesium panel** shows on the left, tool bar icon top right
 
 ## Add the mars terrain tile set
 
-Make a **“Blank 3d Tiles Tileset”** actor in the **Cesium panel** on the left by hitting the plus sign next to it.
+Make a **“Blank 3d Tiles Tileset”** actor in the **Cesium panel** on the left by hitting the **plus sign** next to it.
 
 Select the new tileset in the **WorldOutliner** and find the **“Cesium”** section in **Details tab** below the WorldOutliner. 
 Set the **“source” attribute** to “url” and copy the **link** below as shown in the next picture (left).
