@@ -1,10 +1,9 @@
 # Taking Cesium for Unreal engine to Mars
 
-This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. 
+[Cesium](https://cesium.com) is a powerful **3D Geospatial platform** that recently added integration with the [Unreal game engine](https://www.unrealengine.com/en-US/) enabling developers to build very large games with streaming data. This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. 
 
-[Cesium](https://cesium.com) is a powerful **3D Geospatial platform** that recently added integration with the [Unreal game engine](https://www.unrealengine.com/en-US/) enabling developers to build very large games with streaming data. 
-
-The data is **streaming and geo referenced **(sort of for this one but data on earth works great), which means in the correct coordinate system rather than a flat surface, similar to google earth.
+ 
+The data is **streaming and geo referenced** (sort of for this one but data on earth works great), which means in the correct coordinate system rather than a flat surface, similar to google earth.
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
