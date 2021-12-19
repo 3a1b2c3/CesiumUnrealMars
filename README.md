@@ -71,11 +71,10 @@ In the cars Details tab set Auto Posesses Player settings to “Player0” to ma
 	
 
 ## Finishing up
-
+Go to Edit -> Project Settings and search for “luminance.” Make sure the option Extend default luminance range in Auto Exposure settings is enabled
 Add a light actor like “Directional light” to the scene. Build it (in the toolbar).
 
 Hit play and use WASD keys to drive the car around mars.
 
-More details on tile sets https://github.com/CesiumGS/3d-tiles
-
-
+* More details on tile sets https://github.com/CesiumGS/3d-tiles
+* https://cesium.com/learn/unreal/unreal-quickstart/
