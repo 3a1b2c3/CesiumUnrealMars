@@ -11,7 +11,8 @@ The data is **streaming and geo referenced** (sort of for this one but data on e
 
 Result and **source data set**
 
-There is no need to download any data for the environment, we use it directly from NASA's github. 
+There is no need to download any data for the environment, we use it directly from **NASA's github**. 
+
 I also added the **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
 Since the gltf plugin in Unreal did not quite gave me the result i wanted I added a [Perseverance1.obj](./Perseverance1.obj) in this repro.
 
@@ -27,22 +28,23 @@ Install **Unreal engine**. I am using Unreal engine version 4.27.2 here.
 Make a **new blank Unreal project** (or any other you like).
 Delete all project default content in the **WorldOutliner** tab on the right hand side of the gui. 
 
-**Add a new level** and call it "Mars", you may want to set it as default in **project settings**.
+You can add **a new level** to the project and call it "Mars", you may want to set it as default in **project settings**.
 
-Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://cesium.com/learn/unreal/unreal-quickstart). It opens if you hit the **cesium icon** pictured on the top right (green and blue) of the toolbar. 
+Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://cesium.com/learn/unreal/unreal-quickstart). 
+If enabled it opens a **Cesium tab** when you hit the **cesium icon** pictured on the top right (green and blue) of the toolbar. 
 Getting a **cesium ion token** is optional for this project since we are using our own assets and no terrain or maps.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
 
-The **Unreal cesium panel** shows on the left. 
+The **Unreal cesium panel** shows on the left, tool bar icon top right
 
 
 ## Add the mars terrain tile set
 
-Make a **“Blank 3d Tiles Tileset”** actor in the cesium panel on the left by hitting the plus sign next to it.
+Make a **“Blank 3d Tiles Tileset”** actor in the **Cesium panel** on the left by hitting the plus sign next to it.
 
 Select the new tileset in the **WorldOutliner** and find the **“Cesium”** section in **Details tab** below the WorldOutliner. 
-Set the **“source” attribute **to “url” and add the link below as shown in the next picture (left).
+Set the **“source” attribute** to “url” and copy the **link** below as shown in the next picture (left).
 https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-gap/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize_tileset.json
 
 <img src="https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png" width=400>
