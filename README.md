@@ -1,5 +1,6 @@
 # Taking Cesium for Unreal engine to Mars
 
+This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. 
 
 [Cesium](https://cesium.com) is a powerful **3D Geospatial platform** that recently added integration with the [Unreal game engine](https://www.unrealengine.com/en-US/) enabling developers to build very large games with streaming data. 
 
@@ -7,10 +8,10 @@ The data is **streaming and geo referenced **(sort of for this one but data on e
 
 [[Finished zipped unreal project in this repro]](./mars.zip)
 
-<img src="https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668235-ea7620d4-e1fa-4d41-8e95-f80ca338b24f.png" width=400>
-Result and source data
+<img src="https://user-images.githubusercontent.com/74843139/146665986-92995517-1a09-405b-a1a1-e772a8aa9a24.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668235-ea7620d4-e1fa-4d41-8e95-f80ca338b24f.png" width=300>
 
-This will walk you through making a game from **NASA JPL‘s open mars data set** you can see here: https://nasa-ammos.github.io/3DTilesRendererJS/example/bundle/mars.html. 
+Result and source data set
+
 
 There is need to download any data, we use it directly from their server. 
 The **minimum distance** from Earth to Mars is about 33.9 million miles (54.6 million kilometers). That is a quite large game, even for what Cesium has build. 
@@ -26,8 +27,9 @@ There are already some **great beginner tutorials** for Cesium in Unreal but let
 
 ## Unreal Project Setup
 
-Install Unreal engine. Make a **new blank Unreal project** (or any other you like).
-I am using Unreal engoine version 4.27.2 here. Delete all project default content. 
+Install Unreal engine. I am using Unreal engine version 4.27.2 here.
+Make a **new blank Unreal project** (or any other you like).
+Delete all project default content in the **WorldOutliner** tab on the right hand side of the gui. 
 
 **Add a new level** and call it "Mars", you may want to set it as default in **project settings**.
 
@@ -51,6 +53,8 @@ https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-
 Next set the **level of detail ** attributes for the tile set (shown in the next picture right).
 Hit the **"refresh tile set"** button To see the result.
 
+![image](https://user-images.githubusercontent.com/74843139/146668530-7780770b-fee2-4f46-b4c9-9f55797668d6.png" width=400>
+![image](https://user-images.githubusercontent.com/74843139/146668538-96902d28-7ae2-4206-a37a-3179b1c8cb3b.png" width=400>
 
 	
 Setting url for the tile set actor	Level of Detail settings for the tile set actor
@@ -58,16 +62,17 @@ Setting url for the tile set actor	Level of Detail settings for the tile set act
 Select and frame the tile set actor you just edited. You might see it from below as pictured here in the top view. A Cesium Georeference actor has automatically been generated, select it. In its Details tab, click the Place Georeference Origin Here button while framing the just generated tileset in view as shown below.
 
 Change to top view to see your mars tile better. Add the geo reference in the tile sets Cesium Detail settings as shown below.
-<img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668495-e0fde770-f609-4166-a97d-d361849f7579.png" width=400>
 
-Tile set seen form below (the grid are the tiles)	
+The **mars tile set** seen from below (the grid are the tiles)	
 
 ## Add a car/rover to mars
 
 Place a **standard cube actor **in top view on the terrain tile, this one is scaled up already. We use it as a start location for the car later as the tile set may not be fully loaded initially.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png" width=400>
-The tile setin top view and a cube
+
+The tile set in **top view** and a cube actor placed on it
 
 Frame the cube in viewort and hit Georeference again.
 Add a **Cesium Globe anchor component** to the cube. Set the https://cesium.com/learn/unreal/unreal-quickstart/in details to your georefernec.
@@ -81,8 +86,7 @@ Add the **“advanced vehicle blueprint”** to your projects from **Content bro
 In the cars Details tab set **Auto Posesses Player settings** to “Player0” to make the car your default pawn (player).
 
 <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
-Auto Posesses Player settings
-
+**Auto Posesses** Player settings
 
 
 ## Finishing up
