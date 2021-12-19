@@ -12,9 +12,6 @@ The data is **streaming and geo referenced** (sort of for this one but data on e
 Result and **source data set**
 
 There is no need to download any data for the environment, we use it directly from NASA's github. 
-The **minimum distance** from Earth to Mars is about **33.9 million miles (54.6 million kilometers)**. That is a quite large game, even for what Cesium has build. 
-If you are familiar with **floating point precision errors** it is easy to guess that we need to think of a solution here.
-
 I also added the **Mars Perseverance Rover**, 3D Model here https://mars.nasa.gov/resources/25042/mars-perseverance-rover-3d-model/.
 Since the gltf plugin in Unreal did not quite gave me the result i wanted I added a [Perseverance1.obj](./Perseverance1.obj) in this repro.
 
@@ -63,6 +60,8 @@ Select and frame the **tile set actor** you just edited in WorldOutliner. You mi
 The **mars tile set** seen from below (the grid are the tiles)	abd in WorldOutliner
 
 A **Cesium Georeference actor** has automatically been generated, select it in WorldOutliner. It is a way of dealing with a large coordinate system.
+The **minimum distance** from Earth to Mars is about **33.9 million miles (54.6 million kilometers)**. That is a quite large game, even for what Cesium has build. 
+If you are familiar with **floating point precision errors** it is easy to guess that we need to think of a solution here.
 
 In its **Details tab**, click the Set button while framing the just generated tileset in view as shown below.
 
