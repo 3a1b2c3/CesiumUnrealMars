@@ -32,7 +32,7 @@ Delete all project default content in the **WorldOutliner** tab on the right han
 
 **Add a new level** and call it "Mars", you may want to set it as default in **project settings**.
 
-Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://cesium.com/learn/unreal/unreal-quickstart). It opens if you hit the **cesium icon** pictured on the top right (green and blue). 
+Enable the **Cesium Unreal plugin** available at Unreal [Marketplace](https://cesium.com/learn/unreal/unreal-quickstart). It opens if you hit the **cesium icon** pictured on the top right (green and blue) of the toolbar. 
 Getting a **cesium ion token** is optional for this project since we are using our own assets and no terrain or maps.
 
 <img src="https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png" width=400>
@@ -56,10 +56,11 @@ Next set the **level of detail** attributes for the tile set (shown in the next 
 A smaller **screen space error** give you more detail (0 is the best). Also disable **Tile set culling** to prevent tiles from being unloaded.
 Hit the **"refresh tile set"** button to see the result.
 
-Select and frame the **tile set actor** you just edited in WorldOutiner. You might see it from below as pictured here in the top view. 
-<img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/146668495-e0fde770-f609-4166-a97d-d361849f7579.png" width=400>
+Select and frame the **tile set actor** you just edited in WorldOutiner. You might see it from **below** as pictured here in the top view.
 
-The **mars tile set** seen from below (the grid are the tiles)	
+<img src="https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png" width=400> 
+
+The **mars tile set** seen from below (the grid are the tiles)	abd in WorldOutliner
 
 A **Cesium Georeference actor** has automatically been generated, select it in WorldOutliner. In its **Details tab**, click the Set button while framing the just generated tileset in view as shown below.
 
@@ -80,7 +81,10 @@ Frame the cube in viewort and hit Georeference placement button again.
 You may need to scale up the **"Place actors" tab** of the cube in the **Details tab** so the whole car fits on it.
 Add a **Cesium Globe anchor component** to the cube (Use the green Add Componengt button below the Outliner for this). In the details tab find **Cesium** section and set georeference field to your georeference.
 
-Add the **“Advanced vehicle blueprint”** to your projects from **Content browser** (shown below, use the green Add/Import button to select it). Drag the **Blueprint swatch** from content browser in the top view to your tile set. Place it above the hidden cube.
+Add the **“Advanced vehicle blueprint”** to your projects from **Content browser** (shown below, use the green Add/Import button to select it). 
+
+Drag the **Blueprint swatch** from content browser in the top view to your tile set. Place it above the hidden cube.
+
 <img src="https://user-images.githubusercontent.com/74843139/146669631-d6656ce0-30d1-45e8-91af-dd681c85bebf.png" width=400>
 <img src="https://user-images.githubusercontent.com/74843139/146669621-b982a978-7578-4255-a63c-06b901a3fed8.png" width=400>
 
