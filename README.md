@@ -19,10 +19,11 @@ Make a new blank Unreal project (or any other you like). I am using Unreal versi
 
 Enable the cesium Unreal plugin available at Marketplace it will show up in ui, you see a green and blue icon and a panel on the right when you click that icon. Getting a cesium ion token is optional for this project since we are using our own assets and no terrain or maps.
 
-	
+![image](https://user-images.githubusercontent.com/74843139/146661875-0fb51be6-275a-42f2-b33e-27b9f492eecc.png)
+
 The Unreal cesium panel	
 
-Add the mars terrain
+## Add the mars terrain tile set
 
 Make a “Blank 3d Tiles Tileset” actor in the cesium panel (shows up on the right). It opens if you hit the cesium icon pictured on the top right above and find the “Cesium” section in Details tab. Set the “source” attribute to “url” and add the link below as shown in the next picture (left).
 
@@ -30,6 +31,8 @@ https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-
 
 Next set the level of detail attributes for the tile set (shown in the next picture right).
 Hit the refresh tile set button.
+![image](https://user-images.githubusercontent.com/74843139/146661882-47df2114-278d-45cf-8c10-bc4efd81d55d.png)
+![image](https://user-images.githubusercontent.com/74843139/146661885-ce606870-7b09-404d-bc09-e4df8d5e5ea1.png)
 
 	
 Setting url for the tile set actor	Level of Detail settings for the tile set actor
@@ -37,14 +40,16 @@ Setting url for the tile set actor	Level of Detail settings for the tile set act
 Select and frame the tile set actor you just edited. You might see it from below as pictured here in the top view. A Cesium Georeference actor has automatically been generated, select it. In its Details tab, click the Place Georeference Origin Here button while framing the just generated tileset in view as shown below.
 
 Change to top view to see your mars tile better. Add the geo reference in the tile sets Cesium Detail settings as shown below.
+![image](https://user-images.githubusercontent.com/74843139/146661890-439198ac-3d7b-433f-9743-9fe58044efac.png)
 
-	
 Tile set seen form below (the grid are tiles)	
 
 ## Add a car/rover to mars
 
 Place a standard cube actor in top view on the terrain, this one is scaled. We use it as a start location for the car later as the tile set may not be fully loaded initially.
-	
+
+![image](https://user-images.githubusercontent.com/74843139/146661894-683ae114-2e54-4e95-8801-62346e186e67.png)
+
 Place a standard cube actor	
 
 Frame the cube in viewort and hit Georeference again.
@@ -52,6 +57,7 @@ Frame the cube in viewort and hit Georeference again.
 Add a Cesium Globe anchor component to the cube. Set the Georeference field in details to.
 
 Set rendering to off to hide the cube (shown below)
+![image](https://user-images.githubusercontent.com/74843139/146661901-de463e19-f540-4c1f-a4ec-702a2f1494c5.png)
 
 <img src="https://user-images.githubusercontent.com/74843139/146655459-fdb3a169-a140-420a-aad6-4f53bb156d8a.png" width=400>
 A model 
