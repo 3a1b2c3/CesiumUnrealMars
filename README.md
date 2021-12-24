@@ -148,3 +148,6 @@ My understanding is that it is not possible with tile sets yet but i am convince
 
 * More details on tile sets https://github.com/CesiumGS/3d-tiles
 * https://cesium.com/learn/unreal/unreal-quickstart/
+
+
+After seeing nerfrendering for Unity maybe thats next https://github.com/kwea123/nerf_pl
