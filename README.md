@@ -150,4 +150,4 @@ My understanding is that it is not possible with tile sets yet but i am convince
 * https://cesium.com/learn/unreal/unreal-quickstart/
 
 
-After seeing nerfrendering for Unity maybe thats next https://github.com/kwea123/nerf_pl
+After seeing nerf rendering for Unity maybe thats next https://github.com/kwea123/nerf_pl
