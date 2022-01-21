@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame 3D Tiles Component - WebXR example</title>
+    <meta name="description" content="WebXR example for 3D Tiles component showing photogrammetry."></meta>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/three@0.133.0/examples/js/utils/WorkerPool.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/three@0.133.0/examples/js/loaders/KTX2Loader.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-blink-controls/dist/aframe-blink-controls.min.js"></script>
+    <script src="../../dist/aframe-loader-3dtiles-component.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #ECECEC">
+      <a-entity id="player">
+        <a-camera id="camera"></a-camera>
+        <a-entity id="left-hand" oculus-touch-controls="hand: left" blink-controls="collisionEntities: #floor;"></a-entity>
+        <a-entity id="right-hand" oculus-touch-controls="hand: right" blink-controls="collisionEntities: #floor;"></a-entity>
+      </a-entity>
+      <a-entity
+        id="tileset"
+        position="-3 2.2 -30"
+        rotation="-90 180 0"
+        scale="2 2 2"
+        loader-3dtiles="url: https://raw.githubusercontent.com/NASA-AMMOS/3DTilesSampleData/master/msl-dingo-gap/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize/0528_0260184_to_s64o256_colorize_tileset.json; maximumSSE: 48;"
+     >
+      </a-entity>
+      <a-sky color="#a8caff"></a-sky>
+      <a-entity
+        id="floor"
+        geometry="primitive:plane;"
+        rotation="-88.66 -1.49 2.650"
+        scale="-38.51 68.674 1"
+        position="-2.017 0.48 -32.356"
+        visible="false"
+      ></a-entity>
+    </a-scene>
+    <script>
+        const queryParams = new URLSearchParams(document.location.search);
+
+        if (queryParams.get('tilesetUrl')) {
+            document.querySelector('#tileset').addEventListener('object3dset', (e) => {
+                e.target.setAttribute('loader-3dtiles', {
+                    url: queryParams.get('tilesetUrl')
+                })
+            })
+        }
+    </script>
+
+  </body>
+</html>
